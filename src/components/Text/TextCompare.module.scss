@@ -1,0 +1,120 @@
+@use "/styles/colors" as *;
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.columns {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  & img {
+    @media(max-width:460px) {
+      rotate:90deg;
+    }
+  }
+
+  @media(max-width:460px) {
+    flex-direction: column;
+  }
+}
+
+.stack {
+  flex: 1;
+
+  @media(max-width:460px) {
+    width: 100%;
+    max-width: unset;
+  }
+}
+
+
+
+.areaWrap {
+  position: relative;
+  width: 100%;
+}
+
+.inputText {
+  width: 100%;
+  min-height: 250px;
+  height: 432px;
+  border-radius: 8px;
+  padding: 12px;
+  background: $converter-background;
+  color: $text-primary ;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  resize: none;
+  border: none;
+  outline: none;
+  white-space: pre-wrap;
+  overflow: auto;
+}
+
+.transparentText {
+  color: transparent;
+  caret-color: #fff; // keep caret visible
+}
+
+.highlight {
+  /* mirror textarea */
+  font-family: var(--helvetica), sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 250px;
+  padding: 12px;
+
+  pointer-events: none;
+  overflow-wrap: break-word;
+}
+
+.highlight span[data-add] {
+  color: #2ecc71;
+  /* green */
+}
+
+.highlight span[data-del] {
+  color: #e74c3c;
+  /* red */
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+}
+
+.compareBtn {
+  transition: 0.5s;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  height: 48px;
+  width: 100%;
+  max-width: 142px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  
+  
+}
+
+.compareBtn.hasText {
+  background: $primary-background;
+}
+
+.compareBtn.empty {
+  background: $text-secondary;
+}

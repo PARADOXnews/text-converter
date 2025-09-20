@@ -1,0 +1,10 @@
+@use "/styles/colors" as *;
+
+
+.main {
+
+
+   @media(max-width:768px) {
+      padding: 0px 30px;
+   }
+}
