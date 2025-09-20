@@ -10,10 +10,10 @@ export default function Home() {
 
   return (
     <>
-    <div className={styles.header}>
-      <Header />
-      
-    </div>
+      <div className={styles.header}>
+        <Header />
+
+      </div>
       <main className={styles.main}>
         <TextCompare />
       </main >
