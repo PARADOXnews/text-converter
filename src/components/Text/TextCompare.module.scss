@@ -61,7 +61,9 @@
   color: transparent;
   caret-color: #fff; // keep caret visible
 }
-
+.textarea{
+  text-transform: lowercase;
+}
 .highlight {
   /* mirror textarea */
   font-family: var(--helvetica), sans-serif;
@@ -76,6 +78,7 @@
   width: 100%;
   min-height: 250px;
   padding: 12px;
+
 
   pointer-events: none;
   overflow-wrap: break-word;
